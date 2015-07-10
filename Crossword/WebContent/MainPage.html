@@ -7,6 +7,9 @@
 <script src="myscripts.js"></script>
 <body onload="load()">
 <div id="myform">
+
+Template Title
+
 <b>Crossword Puzzle</b>
 <table>
     <tr>
@@ -24,9 +27,9 @@
         <td><input type="text" id="cellCol" size="5"></td>
     </tr>
     <tr>
-        <td><input type="radio" name="direction" id="across"></td>
+        <td><input type="radio" name="direction" id="across" value="A"></td>
         <td>Across</td>
-        <td><input type="radio" name="direction" id="down"></td>
+        <td><input type="radio" name="direction" id="down" value="D"></td>
         <td>Down</td>
     </tr>
 </table>
@@ -51,7 +54,7 @@
 
 <div id="myDynamicTable">
 <input type="button" id="addRow" value="AddRow" onclick="Javascript:addRow()">
-<input type="button" id="delete" value="Delete" onclick="Javascript:addTable()">
+<input type="button" id="delete" value="Delete" onclick="Javacsript:deleteRow(this)">
 <input type="button" id="preview" value="Preview" onclick="Javascript:addTable()">
 <button type="submit" form="form1" value="Submit">Submit</button>
 

@@ -5,29 +5,40 @@ function addRow() {
     var cellRow = document.getElementById("cellRow");
     var cellCol = document.getElementById("cellCol");
     var cellData = cellRow.value+","+cellCol.value;
-    var across  = document.getElementById("across");
-    var down    = document.getElementById("down");
+    var direction;
+    if (document.getElementById('across').checked)
+    	direction    = document.getElementById("across").value;
+    if (document.getElementById('down').checked)
+    	direction    = document.getElementById("down").value;
     
     var table = document.getElementById("myTableData");
 
     var rowCount = table.rows.length;
     var row = table.insertRow(rowCount);
-    row.insertCell(0).innerHTML= '<input type="checkbox">';
+    
+    row.insertCell(0).innerHTML= '<input type="checkbox" id="select">';
     row.insertCell(1).innerHTML= rowCount;
     row.insertCell(2).innerHTML= question.value;
     row.insertCell(3).innerHTML= answer.value;
     row.insertCell(4).innerHTML= cellData;
-    
- //   row.insertCell(5).innerHTML= across.value;
+    row.insertCell(5).innerHTML= direction;
  
 }
  
 function deleteRow(obj) {
-      
-    var index = obj.parentNode.parentNode.rowIndex;
-    var table = document.getElementById("myTableData");
-    table.deleteRow(index);
-    
+	
+	var table = document.getElementById("myTableData");
+    var rowCount = table.rows.length;
+
+    for(var i=0; i<rowCount; i++) {
+        var row = table.rows[i];
+        var chkbox = row.cells[0].childNodes[0];
+        if(null != chkbox && true == chkbox.checked) {
+            table.deleteRow(i);
+            rowCount--;
+            i--;
+        }
+    }  
 }
  
 function addTable() {
