@@ -1,11 +1,3 @@
-/**
- * CSSReset.com - How To Keep Footer At Bottom of Page with CSS
- * 
- * Original Tutorial: http://www.cssreset.com/2010/css-tutorials/how-to-keep-footer-at-bottom-of-page-with-css/
- * License: Free - do whatever you like with it! Credit and linkbacks much appreciated.
- *
- * NB: Make sure the value for 'padding-bottom' on #content is equal to or greater than the height of #footer.
- */
 html,
 body {
 	margin:0;
@@ -30,4 +22,140 @@ body {
 	position:absolute;
 	bottom:0;
 	left:0;
+}
+
+.myButton {
+	-moz-box-shadow: 0px 10px 14px -7px #276873;
+	-webkit-box-shadow: 0px 10px 14px -7px #276873;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #408c99));
+	background:-moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-o-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
+	background-color:#599bb3;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
+	background:-moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3',GradientType=0);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.MyTable {
+	margin:0px;padding:0px;
+	width:100%;
+	box-shadow: 10px 10px 5px #888888;
+	border:1px solid #000000;
+	
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+	
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+	
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+	
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}.MyTable table{
+    border-collapse: collapse;
+        border-spacing: 0;
+	width:100%;
+	height:100%;
+	margin:0px;padding:0px;
+}.MyTable tr:last-child td:last-child {
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+}
+.MyTable table tr:first-child td:first-child {
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}
+.MyTable table tr:first-child td:last-child {
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+}.MyTable tr:last-child td:first-child{
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+}.MyTable tr:hover td{
+	
+}
+.MyTable tr:nth-child(odd){ background-color:#89c9d3; }
+.MyTable tr:nth-child(even)    { background-color:#ffffff; }.MyTable td{
+	vertical-align:middle;
+	
+	
+	border:1px solid #000000;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:7px;
+	font-size:10px;
+	font-family:Arial;
+	font-weight:normal;
+	color:#000000;
+}.MyTable tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}.MyTable tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}.MyTable tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}
+.MyTable tr:first-child td{
+		background:-o-linear-gradient(bottom, #52b0bf 5%, #408c99 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #52b0bf), color-stop(1, #408c99) );
+	background:-moz-linear-gradient( center top, #52b0bf 5%, #408c99 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#52b0bf", endColorstr="#408c99");	background: -o-linear-gradient(top,#52b0bf,408c99);
+
+	background-color:#52b0bf;
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:14px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#ffffff;
+}
+.MyTable tr:first-child:hover td{
+	background:-o-linear-gradient(bottom, #52b0bf 5%, #408c99 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #52b0bf), color-stop(1, #408c99) );
+	background:-moz-linear-gradient( center top, #52b0bf 5%, #408c99 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#52b0bf", endColorstr="#408c99");	background: -o-linear-gradient(top,#52b0bf,408c99);
+
+	background-color:#52b0bf;
+}
+.MyTable tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}
+.MyTable tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
 }
