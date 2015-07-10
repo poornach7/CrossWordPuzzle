@@ -14,10 +14,11 @@ for (var i = 0; i < 3; i++) {
 	var tr = document.createElement('TR');
 
 	for (var j = 0; j < 4; j++) {
+		
 		var td = document.createElement('TD');
-		td.width = '75';
-		td.appendChild(document.createTextNode(" "));
-
+		td.width = '1';
+		//td.appendChild());
+		td.innerHTML = '<input type="text" maxlength =1 size = 1/>';
 		tr.appendChild(td);
 	}
 	tableBody.appendChild(tr);
