@@ -27,10 +27,10 @@ function addRow() {
     var rowCount = table.rows.length;
     var row = table.insertRow(rowCount);
 	row.insertCell(0).innerHTML= '<input type="checkbox" id="select" >';
-	row.insertCell(1).innerHTML= '<input type="text" name="questionValue" id="questionValue" size="1" required>';
-    row.insertCell(2).innerHTML= '<input type="text" name="answerValue" id="answerValue" required>';
+	row.insertCell(1).innerHTML= '<input type="text" name="questionNoValue" id="questionNoValue" size="1" required>';
+    row.insertCell(2).innerHTML= '<input type="text" name="questionValue" id="questionValue" required>';
     row.insertCell(3).innerHTML= '<input type="text" name="answerValue" id="answerValue" required>';
-    row.insertCell(4).innerHTML= '<input type="text" name="answerValue" id="answerValue" size="6" required>';
+    row.insertCell(4).innerHTML= '<input type="text" name="cellValue" id="cellValue" size="6" required>';
     row.insertCell(5).innerHTML= '<input type="text" name="directionValue" id="directionValue" size="2" maxlength=1 required >';
 }
  
