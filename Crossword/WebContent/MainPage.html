@@ -4,30 +4,41 @@
 <meta charset="ISO-8859-1">
 <title></title>
 </head>
+<script src="myscripts.js"></script>
 <body onload="load()">
 <div id="myform">
 <b>Crossword Puzzle</b>
 <table>
     <tr>
-        <td>Name:</td>
-        <td><input type="text" id="name"></td>
+        <td>Question:</td>
+        <td><input type="text" id="question"></td>
     </tr>
     <tr>
-        <td>Age:</td>
-        <td><input type="text" id="age">
-        <input type="button" id="add" value="Add" onclick="Javascript:addRow()"></td>
+        <td>Answer:</td>
+        <td><input type="text" id="answer">
     </tr>
     <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td>Cell Row:</td>
+        <td><input type="text" id="cellRow" size="5"></td>
+        <td>Column:</td>
+        <td><input type="text" id="cellCol" size="5"></td>
+    </tr>
+    <tr>
+        <td><input type="radio" name="direction" id="across"></td>
+        <td>Across</td>
+        <td><input type="radio" name="direction" id="down"></td>
+        <td>Down</td>
     </tr>
 </table>
+
+
 </div>
 <div id="mydata">
 <b>Current data in the system ...</b>
-<form action="demo_form.asp" method="get" id="form1">
+<form  id="form1">
 	<table id="myTableData"  border="1" cellpadding="2">
 		<tr>
+			<td> </td>
 			<td>No.</td>
 			<td>Question</td>
 			<td>Answer</td>
@@ -39,13 +50,11 @@
 </div>
 
 <div id="myDynamicTable">
-<input type="button" id="addRow" value="addRow" onclick="Javascript:addTable()">
-<input type="button" id="create" value="Click here" onclick="Javascript:addTable()">
-<input type="button" id="create" value="Click here" onclick="Javascript:addTable()">
+<input type="button" id="addRow" value="AddRow" onclick="Javascript:addRow()">
+<input type="button" id="delete" value="Delete" onclick="Javascript:addTable()">
+<input type="button" id="preview" value="Preview" onclick="Javascript:addTable()">
 <button type="submit" form="form1" value="Submit">Submit</button>
 
-<input type="button" id="create" value="Click here" onclick="Javascript:addTable()">
-to create a Table and add some data using JavaScript
 </div>
 </body>
 </html>
