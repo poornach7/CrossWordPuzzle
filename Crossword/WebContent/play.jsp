@@ -5,30 +5,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="js/play.js"></script>
-<script language="JavaScript">
-	//TargetDate = "12/31/2020 5:00 AM";
-	var d = new Date();
-	var hours = d.getHours();
-	var hours = (hours + 24 - 2) % 24;
-	var mid = '';
-	if (hours == 0) { //At 00 hours we need to show 12 am
-		hours = 12;
-		mid = 'AM';
-	} else if (hours > 12) {
-		hours = hours % 12;
-		mid = 'PM';
-	}
-	//TargetDate = d.getDay()+"/"+d.getMonth()+"/"+d.getFullYear()+" "+d.toLocaleTimeString('en-us');
-	TargetDate = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear() + " "
-			+ ((d.getHours() + 1) % 24) + ":" + d.getMinutes() + " " + mid;
-	BackColor = "palegreen";
-	ForeColor = "navy";
-	CountActive = true;
-	CountStepper = -1;
-	LeadingZero = true;
-	DisplayFormat = "%%H%% Hours, %%M%% Minutes, %%S%% Seconds.";
-	FinishMessage = "Time Up!";
-</script>
 <title>Crossword</title>
 
 <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -61,13 +37,12 @@
 					</div>
 				</span>
 			</div>
-
+			<br />
+			<br />
 			<div id="playArea">
-				<table id ="palyTable"></table>
-				<script type="text/javascript">
-				
-
-				</script>
+				<center>
+					<table id="playTable"></table>
+				</center>
 			</div>
 
 		</div>
